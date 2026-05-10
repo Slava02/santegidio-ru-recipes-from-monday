@@ -1,0 +1,20 @@
+version: '3'
+
+tasks:
+  serve:
+    desc: Start local dev server
+    cmds:
+      - hugo server -D --buildDrafts --disableFastRender
+
+  build:
+    desc: Build production site
+    cmds:
+      - hugo --gc --minify
+
+  deploy:
+    desc: Build and push to GitHub
+    cmds:
+      - task: build
+      - git add -A
+      - git commit -m "deploy" || true
+      - git push origin main
