@@ -4,7 +4,8 @@ title = "Рецепты от группы понедельника"
 theme = "recipe"
 disableKinds = ["sitemap"]
 pluralizeListTitles = false
-paginate = 20
+[pagination]
+pagerSize = 20
 SectionPagesMenu = "main"
 
 [outputs]
